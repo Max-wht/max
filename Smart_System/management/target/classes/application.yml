@@ -1,0 +1,39 @@
+
+#配置服务器相关信息
+server:
+  context-path: localhost
+  port: 9090
+
+
+
+#数据库连接信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://8.136.122.79:3306/smart_system
+    username: root
+    password: 26095186wht
+    #文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
+#MyBatis配置
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+
+aliyun:
+  oss:
+    endpoint: https://oss-cn-hangzhou.aliyuncs.com
+    accessKeyId: LTAI5tLe8F1kHg8s4ib4JuW3
+    accessKeySecret: YN7RWMuNB7m4k0a6JFulSqHjrfUpWk
+    bucketName: web-tilas-max
+
+#日志管理
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug

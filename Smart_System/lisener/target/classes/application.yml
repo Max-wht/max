@@ -1,0 +1,41 @@
+
+
+spring:
+  #配置服务端口
+  server:
+    port: 8080
+
+  #配置数据库连接信息
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://8.136.122.79:3306/smart_system
+    username: root
+    password: 26095186wht
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    virtual-host: /max
+    username: max
+    password: 26095186wht
+
+#MyBatis配置信息：日志和驼峰命名规则
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+#日志管理
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug
+
+iot:
+  aliyun:
+    accessKeyId: LTAI5tLe8F1kHg8s4ib4JuW3
+    accessKeySecret: YN7RWMuNB7m4k0a6JFulSqHjrfUpWk
+    consumerGroupId: XsQYoFjSdnCsQq3MeppC000100
+    regionId: cn-shanghai
+    iotInstanceId: iot-06z00b87l41swfh
+    host: iot-06z00b87l41swfh.amqp.iothub.aliyuncs.com
+
