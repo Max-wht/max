@@ -12,7 +12,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://8.136.122.79:3306/smart_system
     username: root
-    password: 26095186wht
+    password: *
     #文件上传配置
   servlet:
     multipart:
@@ -29,8 +29,8 @@ mybatis:
 aliyun:
   oss:
     endpoint: https://oss-cn-hangzhou.aliyuncs.com
-    accessKeyId: LTAI5tLe8F1kHg8s4ib4JuW3
-    accessKeySecret: YN7RWMuNB7m4k0a6JFulSqHjrfUpWk
+    accessKeyId: *
+    accessKeySecret: *
     bucketName: web-tilas-max
 
 #日志管理
